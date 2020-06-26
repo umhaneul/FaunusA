@@ -1,4 +1,4 @@
-import species as species
+# import species as species
 from django.db import models
 
 # class Species(models.Model):
@@ -15,7 +15,7 @@ class Dictionary(models.Model):
     eat = models.CharField(max_length=20, help_text="뭘 먹나요?")          #먹이
     live = models.CharField(max_length=20, help_text="어디 사나요?")         #서식지
     description = models.TextField()               #부연설명
-    # image = models.ImageField()              #이미지
+    image = models.ImageField(blank=True, upload_to="dictionary/image/")              #이미지
 
     def __str__(self):
         return "이름 : " + self.animal_name

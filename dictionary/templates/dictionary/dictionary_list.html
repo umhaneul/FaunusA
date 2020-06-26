@@ -5,6 +5,17 @@
 {% block content %}
     <a href="{% url 'dictionary:add' %}" class="btn btn-primary btn-sm">Add Dictionary</a>
     <p></p>
+    <form action="" method="get">
+        <div class="row">
+            <div class="col">
+                <input type="text" name="search_animal_name" value="{{ request.GET.search_animal_name }}"
+                       class="form-control">
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-dark">Search</button>
+            </div>
+        </div>
+    </form>
     <table class="table">
         <thead>
         <tr>
@@ -28,6 +39,7 @@
 {% endblock %}
 
 {% block pagination %}
+    {% if is_paginated %}
     <ul class="pagination pagination-sm justify-content-center">
         {% if page_obj.has_previous %}
             <li class="page-item"><a href="{{ request.path }}?page={{ page_obj.previous_page_number }}" class="page-link">Previous</a></li>
@@ -47,4 +59,5 @@
         <li class="page-item disabled"><a href="" class="page-link">Next</a></li>
     {% endif %}
     </ul>
+    {% endif %}
 {% endblock %}
