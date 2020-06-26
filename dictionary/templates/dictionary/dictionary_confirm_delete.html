@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirm Delete{% endblock %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>진짜 지울래? {{ dictionary }}</div>
+        <button type="submit" class="btn btn-danger btn-sm">sure</button>
+    </form>
+    <button onclick="history.back()" class="btn btn-info btn-sm">Cancel</button>
+{% endblock %}

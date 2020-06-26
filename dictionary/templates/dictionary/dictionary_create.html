@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Add{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add dictionary" class="btn btn-primary btn-sm">
+    </form>
+    <button onclick="history.back()" class="btn btn-info btn-sm">Cancel</button>
+{% endblock %}

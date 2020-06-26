@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Update{% endblock %}
+
+{% block content %}
+    <from action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_ul }}
+        </table>
+        <button type="submit" class="btn btn-primary btn-sm">Modify</button>
+    </from>
+    <button onclick="history.back()" class="btn btn-primary btn-sm">Cancel</button>
+{% endblock %}
