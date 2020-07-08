@@ -71,7 +71,7 @@ body{
 
 ul li {
     text-align: center;
-   margin-right: 50px;
+    margin-right: 50px;
     margin-top: 10px;
     list-style-type: none;
     float: left;
@@ -121,8 +121,8 @@ nav a:before, nav a:after
     border-radius: 50%;
     transform: scale(0);
     transition: 0.2s ease transform;
-     writing-mode: horizontal-tb;
-     margin-bottom: 1em;
+    writing-mode: horizontal-tb;
+    margin-bottom: 1em;
 }
 
 nav a:before
@@ -131,6 +131,7 @@ nav a:before
     left: 10px;
     width: 6px;
     height: 6px;
+    writing-mode: horizontal-tb;
 }
 
 nav a:after
@@ -143,7 +144,7 @@ nav a:after
 
 nav a:nth-child(1):before
 {
-    background-color: yellow;
+    background-color: black;
 }
 
 nav a:nth-child(1):after
@@ -297,6 +298,7 @@ nav a:nth-child(7):hover ~ #indicator
     position: absolute;
     left: 0;
     right: 0;
+    width: 900px;
 }
 .contents {
     transform: translate(500px, 200px);
@@ -309,4 +311,8 @@ nav a:nth-child(7):hover ~ #indicator
 }
 .pagebar {
     transform: translate(20px, 2000px);
+}
+.h1 {
+   position: absolute;
+    transform: translate(50px, 60px);
 }

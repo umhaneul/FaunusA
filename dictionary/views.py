@@ -7,7 +7,7 @@ from dictionary.models import Dictionary
 
 class DictionaryList(ListView):
     model = Dictionary
-    paginate_by = 9
+    # paginate_by = 9
 
     def get_queryset(self):
         search_animal_name = self.request.GET.get('search_animal_name', '')
@@ -15,6 +15,10 @@ class DictionaryList(ListView):
         if search_animal_name == '':
             dictionary_list = self.model.objects.all()
         else:
+            # # 검색 결과가 1개일 때만 바로 설명문으로 넘어가고 검색 결과가 여러 가지일 경우에는 list가 나온다.
+            # if dictionary_list == 1:
+            #
+            # else:
             dictionary_list = self.model.objects.filter(animal_name__contains=search_animal_name)
         return dictionary_list
 
