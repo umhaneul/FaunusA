@@ -28,11 +28,11 @@
         </form>
     <div class="contents">
         {% if dictionary.image != '' %}<img src=" {{ dictionary.image.url }}" class="photo2">{% endif %}<br>
-        {{ dictionary.animal_name }} <p>
-        {{ dictionary.level }}<p>
-        {{ dictionary.age }}<p>
-        {{ dictionary.eat }}<p>
-        {{ dictionary.live }}<p>
-        {{ dictionary.description }}
+        이름 : <a/>{{ dictionary.animal_name }} <p>
+        과 : {{ dictionary.level }}<p>
+        수명 : {{ dictionary.age }}<p>
+        먹이 : {{ dictionary.eat }}<p>
+        서식지 : {{ dictionary.live }}<p>
+        내용 : {{ dictionary.description }}
     </div>
 {% endblock %}
