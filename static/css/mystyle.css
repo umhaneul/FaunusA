@@ -144,7 +144,7 @@ nav a:after
 
 nav a:nth-child(1):before
 {
-    background-color: black;
+    background-color: yellow;
 }
 
 nav a:nth-child(1):after
@@ -312,7 +312,6 @@ nav a:nth-child(7):hover ~ #indicator
 .pagebar {
     transform: translate(20px, 2000px);
 }
-.h1 {
-   position: absolute;
-    transform: translate(50px, 60px);
+.t{
+
 }

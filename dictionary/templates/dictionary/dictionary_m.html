@@ -5,6 +5,7 @@
 {% block title %}List{% endblock %}s
 
     {% block content %}
+        <a class="t">전체보기</a>
         <img src="{% static 'image/logo.png' %}" class="photo"> {# 로고 이미지 #}
         <nav>
           <a href="{% url 'dictionary:list' %}" id="list1" onmouseover="mover1()" onmouseout="mout1()">VIEWALL</a>     {# 네비게이션 바 #}
