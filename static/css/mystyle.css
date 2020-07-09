@@ -28,7 +28,7 @@ body{
 }
 
 .form-control{
-    transform: translate(530px, 130px);
+    transform: translate(590px, 130px);
 }
 
 .search{
@@ -40,7 +40,7 @@ body{
 }
 
 .search{
-    transform: translate(1270px, 90px);
+    transform: translate(1310px, 90px);
 }
 
 .g {
@@ -95,7 +95,7 @@ nav
     width: 319px;
     display: table;
     margin: 0 auto;
-    transform: translate(-310px,-260px);
+    transform: translate(-237px,-300px);
     writing-mode: horizontal-tb;
 }
 
@@ -219,8 +219,8 @@ nav a:nth-child(7):after
     width: 30px;
     height: 3px;
     background-color: skyblue;
-    border-radius: 5px;
-    transition: 0.2s ease left;
+    border-radius: 2px;
+    transition: 0.1s ease left;
     top: 35px;
 }
 
@@ -306,10 +306,10 @@ nav a:nth-child(7):hover ~ #indicator
     position: absolute;
     left: 0;
     right: 0;
-    width: 900px;
+    width: 700px;
 }
 .contents {
-    transform: translate(500px, 200px);
+    transform: translate(630px, 180px);
 }
 
 .pagebar {
@@ -319,4 +319,7 @@ nav a:nth-child(7):hover ~ #indicator
 }
 .pagebar {
     transform: translate(20px, 2000px);
+}
+.name{
+    font-weight:900;
 }

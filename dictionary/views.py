@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 
@@ -15,12 +15,14 @@ class DictionaryList(ListView):
         if search_animal_name == '':
             dictionary_list = self.model.objects.all()
         else:
-            # # 검색 결과가 1개일 때만 바로 설명문으로 넘어가고 검색 결과가 여러 가지일 경우에는 list가 나온다.
-            # if dictionary_list == 1:
-            #
-            # else:
             dictionary_list = self.model.objects.filter(animal_name__contains=search_animal_name)
         return dictionary_list
+
+    def get(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        if len(queryset) == 1:
+            return redirect('dictionary:detail', queryset.first().pk)
+        return super().get(request, *args, **kwargs)
 
 class DictionaryPiscesList(ListView):
     model = Dictionary
@@ -78,6 +80,7 @@ class DictionaryCreateView(CreateView):
 
 class DictionaryDetailView(DetailView):
     model = Dictionary
+    template_name = 'dictionary/dictionary_detail.html'
 
 class DictionaryUpdateView(UpdateView):
     model = Dictionary

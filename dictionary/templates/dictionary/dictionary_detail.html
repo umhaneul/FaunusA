@@ -16,19 +16,19 @@
         <div id="indicator"></div>
     </nav>
 
-    <form action="" method="get"> {# 검색기능 #}
-            <div class="row">
-                <div class="col">
-                    <div class="col">
-                        <input type="text" name="search_animal_name" value="{{ request.GET.search_animal_name }}" class="form-control">
-                    </div>
-                    <button type="submit" class="search btn-dark">Search</button>
-                </div>
-            </div>
-        </form>
-    <div class="contents">
-        {% if dictionary.image != '' %}<img src=" {{ dictionary.image.url }}" class="photo2">{% endif %}<br>
-        <b>이름</b> : {{ dictionary.animal_name }} <p>
+{#    <form action="" method="get"> {# 검색기능 #}
+{#            <div class="row">#}
+{#                <div class="col">#}
+{#                    <div class="col">#}
+{#                        <input type="text" name="search_animal_name" value="{{ request.GET.search_animal_name }}" class="form-control">#}
+{#                    </div>#}
+{#                    <button type="submit" class="search btn-dark">Search</button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </form>#}
+    <div class="contents"><p>
+        {% if dictionary.image != '' %}<img src=" {{ dictionary.image.url }}" class="photo2">{% endif %}<p>
+        <a class="name">이름</a> : {{ dictionary.animal_name }} <p>
         <b>과</b> : {{ dictionary.level }}<p>
         <b>수명</b> : {{ dictionary.age }}<p>
         <b>먹이</b> : {{ dictionary.eat }}<p>
